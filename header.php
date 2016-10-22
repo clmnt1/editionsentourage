@@ -48,7 +48,6 @@
 <meta name="msapplication-TileColor" content="#b5e3d8">
 <meta name="theme-color" content="#b5e3d8">	
 <script src="<?php echo esc_url( get_stylesheet_directory_uri() . '/js/slide-menu.js'); ?>" type="text/javascript"></script>
-<script src="<?php echo esc_url( get_stylesheet_directory_uri() . '/js/modal.js'); ?>" type="text/javascript"></script>
 
 </head>
 <body <?php body_class(); ?>>

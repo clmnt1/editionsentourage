@@ -118,11 +118,3 @@ return pll_get_post( $page );
  */
 define( 'WC_MAX_LINKED_VARIATIONS', 150 );
 
-/*
- * Woocommerce product page layout
- */
-remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_rating', 10 );
-remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
-
-remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10 );
-add_action( 'woocommerce_single_product_summary', 'woocommerce_output_product_data_tabs', 5 );
