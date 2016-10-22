@@ -1,0 +1,265 @@
+/*
+Theme Name: editionsentourage
+Theme URI: http://www.leovirieu.fr
+Version: 2.4.6
+Description: Graphiste/designer.
+Author: Leo Virieu
+Author URI: http://www.leovirieu.fr
+Template: Divi
+License: GNU General Public License v2
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+
+/*
+Et c'est partiiiiiieeeeee
+*/
+
+
+/* BODY */
+	body {
+		background:none;
+	}
+
+
+
+/* Contact Info */
+	#et-info { 
+		float: left; 
+	}
+
+
+/*a partir de ici c'est de l'ajout*/
+
+/* Three columns layout */
+#main-content {
+	width: 84%;
+	margin: 0 auto;
+	z-index: 1;
+}
+.left-column {
+	position: fixed;
+	left: 0;
+	top: 0;
+	height: 100vh;
+	width: 8%;
+	z-index: 101;
+}
+.right-column  {
+	position: fixed;
+	right: 0;
+	top: 0;
+	height: 100vh;
+	width: 8%;
+	z-index: 101;
+}
+
+/* Custom navigation */
+.slidemenu-control {
+	cursor: pointer;
+}
+.slidemenu-menu {
+	position: absolute;
+	top: 0;
+	display: block !important;
+	width: 50vw;
+	height: 100vh;
+	padding: 30%;
+	background: rgba(240, 216, 131, 0.95);
+	z-index: 101;
+	-webkit-transition: all 0.3s ease-in-out 0.3s;
+	transition: all 0.3s ease-in-out 0.3s;
+}
+
+#top-menu{
+	font-family: 'Open Sans', Helvetica, Arial, Lucida, sans-serif;
+	font-weight: 300;
+	line-height: 1.8em;
+}
+
+#logo{
+	margin-top: 37%;
+	margin-left: 30%;
+}
+
+.slidemenu-left .slidemenu-menu {
+	left: -50vw;
+}
+.slidemenu-right .slidemenu-menu {
+	right: -50vw;
+}
+.slidemenu-left .slidemenu-menu.active {
+	left: 0;
+}
+.slidemenu-right .slidemenu-menu.active {
+	right: 0;
+}
+.slidemenu-menu.active {
+	display: block !important;
+	height: 100vh;
+}
+
+.slidemenu-close {
+	position: absolute;
+	cursor: pointer;
+	top: 7.5%;
+}
+
+.slidemenu-left .slidemenu-close {
+	right: 15px;
+}
+.slidemenu-right .slidemenu-close {
+	left: 15px;
+}
+
+#top-menu li {
+	display: block;
+}
+
+/* Cart sidebar */
+.cart-sidebar {
+	margin-top: 37%;
+	margin-left: 30%;
+}
+
+/* Cart widget right sidebar*/
+.mini_cart_item{
+	padding-top: 15%;
+	padding-left:5%;
+}
+
+/* Floating Dot Navigation */
+ul.et_pb_side_nav {
+	display: block;
+	position: fixed;
+	z-index: 99999;
+	top: 50%;
+	right: 2%;
+	width: 0px;
+	padding: 4%;
+	-webkit-border-top-left-radius: 0;
+	-moz-border-radius-topleft: 0;
+	border-top-left-radius: 0;
+	-webkit-border-bottom-left-radius: 0;
+	-moz-border-radius-bottomleft: 0;
+	border-bottom-left-radius: 0;
+	opacity: 0;
+	background: rgba(0, 0, 0, 0);
+}
+
+ul.et_pb_side_nav li.side_nav_item {
+	padding: 10px;
+}
+
+ul.et_pb_side_nav .side_nav_item a {
+	display: block;
+	width: 20px;
+	height: 4px;
+	margin-right: 0px;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+	background-color: rgba(0, 0, 0, 0);
+	text-indent: -9999px;
+	border-top:4px solid;
+	border-color: rgba(0, 0, 0, 1);
+    padding:4px;
+	}
+
+ul.et_pb_side_nav.et-visible {
+	opacity: 1;
+	-webkit-animation: fadeInRight 1.5s 1 cubic-bezier(0.77, 0, 0.175, 1);
+	-moz-animation: fadeInRight 1.5s 1 cubic-bezier(0.77, 0, 0.175, 1);
+	-o-animation: fadeInRight 1.5s 1 cubic-bezier(0.77, 0, 0.175, 1);
+	animation: fadeInRight 1.5s 1 cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+ul.et_pb_side_nav .side_nav_item a.active {
+	background-color: rgba(240, 216, 131, 0)!important;
+	border-color: #666666;
+	width: 40px;
+
+}
+
+
+/* Back To Top Button */
+.et_pb_scroll_top.et-pb-icon {
+	display: none;
+	position: fixed;
+	z-index: 99999;
+	right: 0;
+	bottom: 125px;
+	padding: 5px;
+	-webkit-border-top-left-radius: 5px;
+	-moz-border-radius-topleft: 5px;
+	border-top-left-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	border-bottom-left-radius: 5px;
+	color: #fff;
+	background: rgba(0, 0, 0, 0.4);
+	font-size: 20px;
+	font-weight: 800;
+	text-align: center;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.et_pb_scroll_top:before {
+	content: "2";
+}
+
+.et_pb_scroll_top.et-visible {
+	opacity: 1;
+	-webkit-animation: fadeInRight 1s 1 cubic-bezier(0.77, 0, 0.175, 1);
+	-moz-animation: fadeInRight 1s 1 cubic-bezier(0.77, 0, 0.175, 1);
+	-o-animation: fadeInRight 1s 1 cubic-bezier(0.77, 0, 0.175, 1);
+	animation: fadeInRight 1s 1 cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.et_pb_scroll_top.et-hidden {
+	opacity: 0;
+	-webkit-animation: fadeOutRight 1s 1 cubic-bezier(0.77, 0, 0.175, 1);
+	-moz-animation: fadeOutRight 1s 1 cubic-bezier(0.77, 0, 0.175, 1);
+	-o-animation: fadeOutRight 1s 1 cubic-bezier(0.77, 0, 0.175, 1);
+	animation: fadeOutRight 1s 1 cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+/*menu et bar sup*/
+.et_header_style_left .logo_container {
+    position: static;
+}
+
+.et_fullwidth_nav #main-header .container {
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+}
+
+.et_fixed_nav #et-top-navigation {
+    transition: all 0.3s ease-in-out 0.3s;
+}
+
+
+/* onglet recherche*/
+.et_slide_menu_top .et-search-form {
+    border-radius: 0px;
+}
+
+/*woocommerce buttons*/
+.woocommerce-page button.button:hover {
+	color: #666666 !important;
+}
+    
+/*footer taille*/
+
+#footer-bottom {
+    padding: 6px 0 0px;
+}
+
+/* footer largeur*/
+div.container.clearfix {
+    position: bottom;
+    width: 96%;
+}
