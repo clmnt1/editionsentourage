@@ -112,11 +112,17 @@ function pss_translate_woo_pages( $page ) {
 return pll_get_post( $page );
 
 }
-add_filter( ‘woocommerce_get_myaccount_page_id’, ‘pss_translate_woo_pages’, 10, 1 );
-add_filter( ‘woocommerce_get_edit_address_page_id’, ‘pss_translate_woo_pages’, 10, 1 );
-add_filter( ‘woocommerce_get_shop_page_id’, ‘pss_translate_woo_pages’, 10, 1 );
-add_filter( ‘woocommerce_get_cart_page_id’, ‘pss_translate_woo_pages’, 10, 1 );
-add_filter( ‘woocommerce_get_checkout_page_id’, ‘pss_translate_woo_pages’, 10, 1 );
-add_filter( ‘woocommerce_get_pay_page_id’, ‘pss_translate_woo_pages’, 10, 1 );
-add_filter( ‘woocommerce_get_view_order_page_id’, ‘pss_translate_woo_pages’, 10, 1 );
-add_filter( ‘woocommerce_get_terms_page_id’, ‘pss_translate_woo_pages’, 10, 1 );
+
+/**
+ * Increase variations products limit.
+ */
+define( 'WC_MAX_LINKED_VARIATIONS', 150 );
+
+/*
+ * Woocommerce product page layout
+ */
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_rating', 10 );
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
+
+remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10 );
+add_action( 'woocommerce_single_product_summary', 'woocommerce_output_product_data_tabs', 5 );
