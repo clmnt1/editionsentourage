@@ -20,7 +20,7 @@
 							<div class="social-links">
 								<?php get_template_part( 'includes/social_icons', 'header' ); ?>
 							</div>
-							<div class="copyright"><span>2015-<?php echo date('Y'); ?> © C R & L V</span></div>
+							<div class="copyright"><span>2015-<?php echo date('Y'); ?> © <a href="www.clementribe.fr">C R</a href="www.leovirieu.fr"> & <a>L V</a></span></div>
 						</div>
 					</div>
 					<div class="middle-bar">

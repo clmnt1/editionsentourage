@@ -5,7 +5,7 @@ jQuery.fn.slideMenu = function(direction) {
 	
 	jQuery(this).addClass('slidemenu-'+direction);
 
-	menu.append('<div class="slidemenu-close"><img src="http://localhost:8888/wp-content/themes/editionsentourage/images/X_222222.svg"></img></div>')
+	menu.append('<div class="slidemenu-close"></div>');
 	
 	var closeBtn = menu.find('.slidemenu-close');
 

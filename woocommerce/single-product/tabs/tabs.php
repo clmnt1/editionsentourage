@@ -29,19 +29,14 @@ $tabs = apply_filters( 'woocommerce_product_tabs', array() );
 
 if ( ! empty( $tabs ) ) : ?>
 
-	<div class="woocommerce-tabs wc-tabs-wrapper">
-		<ul class="tabs wc-tabs">
-			<?php foreach ( $tabs as $key => $tab ) : ?>
-				<li class="<?php echo esc_attr( $key ); ?>_tab">
-					<a href="#tab-<?php echo esc_attr( $key ); ?>"><?php echo apply_filters( 'woocommerce_product_' . $key . '_tab_title', esc_html( $tab['title'] ), $key ); ?></a>
-				</li>
-			<?php endforeach; ?>
-		</ul>
+	<ul class="attributes-list">
 		<?php foreach ( $tabs as $key => $tab ) : ?>
-			<div class="panel entry-content wc-tab" id="tab-<?php echo esc_attr( $key ); ?>">
-				<?php call_user_func( $tab['callback'], $key, $tab ); ?>
-			</div>
+			<li class="<?php echo esc_attr( $key ); ?>">
+				<div class="panel entry-content wc-tab" id="<?php echo esc_attr( $key ); ?>">
+					<?php call_user_func( $tab['callback'], $key, $tab ); ?>
+				</div>
+			</li>
 		<?php endforeach; ?>
-	</div>
+	</ul>
 
 <?php endif; ?>
