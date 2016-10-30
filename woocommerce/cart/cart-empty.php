@@ -30,7 +30,7 @@ wc_print_notices();
 <?php do_action( 'woocommerce_cart_is_empty' ); ?>
 
 <p class="return-to-shop">
-	<a class="button wc-backward" href="http://lamaisonrouge-backpackerhostel.fr/product/lits/">
+	<a class="button wc-backward" href="http://xn--ditionsentourage-9pb.fr">
 		<?php _e( 'Return To Shop', 'woocommerce' ) ?>
 	</a>
 </p>

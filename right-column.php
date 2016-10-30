@@ -77,7 +77,7 @@
 					<?php endif; ?>
 
 					<?php if ( ! WC()->cart->is_empty() ) : ?>
-
+						<div
 						<p class="total"><strong><?php _e( 'Subtotal', 'woocommerce' ); ?>:</strong> <?php echo WC()->cart->get_cart_subtotal(); ?></p>
 
 						<?php do_action( 'woocommerce_widget_shopping_cart_before_buttons' ); ?>
@@ -91,7 +91,7 @@
 					<?php endif; ?>
 
 					<?php do_action( 'woocommerce_after_mini_cart' ); ?>
-
+				</div>
 		</div>
 	</div><!-- cart-sidebar -->
 
