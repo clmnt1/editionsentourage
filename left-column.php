@@ -46,22 +46,7 @@
 							echo( $primaryNav );
 						endif;
 						?>
-						<!-- #contact -->
-						<div id="et-info">
-						<?php if ( '' !== ( $et_phone_number = et_get_option( 'phone_number' ) ) ) : ?>
-							<a href="<?php echo esc_attr( 'callto:' . $et_phone_number ); ?>"><span><?php echo esc_html( $et_phone_number ); ?></span></a>
-						<?php endif; ?>
 
-						<?php if ( '' !== ( $et_email = et_get_option( 'header_email' ) ) ) : ?>
-							<a href="<?php echo esc_attr( 'mailto:' . $et_email ); ?>"><span><?php echo esc_html( $et_email ); ?></span></a>
-						<?php endif; ?>
-
-						<?php
-						if ( true === $show_header_social_icons ) {
-							get_template_part( 'includes/social_icons', 'header' );
-						} ?>
-						</div> <!-- #et-info -->
-						<!-- #fin-contact -->
 						<!-- #search -->
 						<?php if ( false !== et_get_option( 'show_search_icon', true ) || is_customize_preview() ) : ?>
 						  <?php if ( 'fullscreen' !== et_get_option( 'header_style', 'left' ) ) { ?>
@@ -77,28 +62,52 @@
 						    ?>
 						    <button type="submit" id="searchsubmit_header"><img src="<?php echo get_stylesheet_directory_uri() ?>/images/search-icon.svg" /></button>
 						  </form>
+
+							<?php if ( ( false !== et_get_option( 'show_search_icon', true ) && ! $et_slide_header ) || is_customize_preview() ) : ?>
+								<div id="et_top_search">
+									<span id="et_search_icon"></span>
+								</div>
+
+							<?php endif; // true === et_get_option( 'show_search_icon', false ) ?>
 						<?php endif; // true === et_get_option( 'show_search_icon', false ) ?>
 						<!-- #end-search -->
+
 						<!-- #et-secondary-menu -->
 						<?php
-							if ( is_page_template( 'page-template-blank.php' ) ) {
+						if ( is_page_template( 'page-template-blank.php' ) ) {
 								return;
 							}
-
 							$et_secondary_nav_items = et_divi_get_top_nav_items();
-
 							$et_secondary_nav = $et_secondary_nav_items->secondary_nav;
+						?>
 
-						?>
 						<div id="et-secondary-menu">
-						<?php
-							if ( '' !== $et_secondary_nav ) {
-								echo $et_secondary_nav;
-							}
-						?>
+							<?php
+								if ( '' !== $et_secondary_nav ) {
+									echo $et_secondary_nav;
+								}
+							?>
 						</div>
 						<!-- #end-et-secondary-menu -->
 					</div>
+
+					<!-- #contact -->
+					<div id="et-info">
+						<?php if ( '' !== ( $et_phone_number = et_get_option( 'phone_number' ) ) ) : ?>
+							<a href="<?php echo esc_attr( 'callto:' . $et_phone_number ); ?>"><span><?php echo esc_html( $et_phone_number ); ?></span></a>
+						<?php endif; ?>
+
+						<?php if ( '' !== ( $et_email = et_get_option( 'header_email' ) ) ) : ?>
+							<a href="<?php echo esc_attr( 'mailto:' . $et_email ); ?>"><span><?php echo esc_html( $et_email ); ?></span></a>
+						<?php endif; ?>
+
+						<?php
+						if ( true === $show_header_social_icons ) {
+							get_template_part( 'includes/social_icons', 'header' );
+						} ?>
+					</div> <!-- #et-info -->
+					<!-- #fin-contact -->
+
 				</nav>
 			<?php endif; ?>
 
@@ -106,12 +115,6 @@
 				<span class="mobile_menu_bar et_pb_header_toggle et_toggle_<?php echo et_get_option( 'header_style', 'left' ); ?>_menu"></span>
 			<?php endif; ?>
 
-			<?php if ( ( false !== et_get_option( 'show_search_icon', true ) && ! $et_slide_header ) || is_customize_preview() ) : ?>
-				<div id="et_top_search">
-					<span id="et_search_icon"></span>
-				</div>
-
-			<?php endif; // true === et_get_option( 'show_search_icon', false ) ?>
 
 			<?php do_action( 'et_header_top' ); ?>
 

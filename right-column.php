@@ -9,9 +9,13 @@
 
 		<?php do_action( 'woocommerce_before_mini_cart' ); ?>
 
-		<div class="slidemenu-control">
-			<?php echo $items_number = WC()->cart->get_cart_contents_count(); ?>
+		<div class="cart-picto">
+			<div class="slidemenu-control">
+				<?php echo $items_number = WC()->cart->get_cart_contents_count(); ?>
+			</div>
 		</div>
+
+
 
 		<div class="slidemenu-menu cart_list_container">
 				<div class="cart_list product_list_widget <?php echo $args['list_class']; ?>">
