@@ -10,7 +10,7 @@ $widthText = (get_post_meta($product->id, 'width_text', true) != '') ? get_post_
 $depthText = (get_post_meta($product->id, 'depth_text', true) != '') ? get_post_meta($product->id, 'depth_text', true) : 0;
 ?>
 
-<div class="material-tab">
+<div class="size-tab product-tab">
     <h2><?php _e('Dimensions', 'ee') ?></h2>
     <span><?php _e('Hauteur', 'ee') ?></span>
     <?php echo $heightText ?>

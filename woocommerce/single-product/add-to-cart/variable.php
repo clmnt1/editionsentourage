@@ -51,7 +51,6 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 		<div class="variable-button-container">
 			<a class="modal-button" data-toggle="modal" data-target="#variable-modal"><?php echo __('Choisir le n° de série') ?></a>
 		</div>
-<<<<<<< HEAD
 		<?php
 //		$variations = $product->get_available_variations();
 //		foreach($variations as $variation){
@@ -60,29 +59,19 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 //			$stock = $variation_obj->get_stock_quantity();
 //			$productname = get_post_meta($variation_obj->get_variation_id(), 'attribute_options');
 //		} ?>
-=======
 
->>>>>>> 87a5a7ff87606828595f23d0698f1d7134c9caf5
 		<div id="variable-modal" class="variable-modal-container modal">
 			<div class="modal-overlay"></div>
 			<div class="modal-content">
 				<div class="modal-close" data-dismiss="modal"></div>
 				<div class="modal-body">
 					<ul class="attribute-list">
-					<?php foreach ( $attributes as $attribute_name => $options ) : ?>
-<<<<<<< HEAD
-						<?php foreach ( $options as $key => $option) : ?>
-							<?php $product_variations = $product->get_available_variations();
-							$variation_id = $product_variations [$key]['variation_id'];
-							$variation_obj = new WC_Product_variation($variation_id);
-							$stock = $variation_obj->get_stock_quantity();
-							var_dump();?>
-=======
-						<?php foreach ( $options as $option) : ?>
->>>>>>> 87a5a7ff87606828595f23d0698f1d7134c9caf5
-							<li class="attribute-item"><?php echo $option ?></li>
+						<?php $product_variations = $product->get_available_variations();
+						foreach ($product_variations as $key => $variation): ?>
+							<?php $variation_name = reset($variation['attributes']); ?>
+							<?php $variation_ava = $variation['is_in_stock']; ?>
+							<li class="attribute-item <?php echo !$variation_ava?'out-of-stock':'' ?>"><?php echo $variation_name ?></li>
 						<?php endforeach; ?>
-					<?php endforeach; ?>
 					</ul>
 				</div>
 			</div>
