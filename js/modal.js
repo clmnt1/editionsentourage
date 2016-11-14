@@ -19,19 +19,21 @@ jQuery.fn.modal = function() {
     });
 
     jQuery('.attribute-item').click(function() {
-        var target = jQuery("#"+jQuery(this).closest('.modal').attr('id'));
-        var variationValue = jQuery(this).html();
-        var variationSelect = jQuery('.variations').find('select');
+        if(!jQuery(this).hasClass('out-of-stock')) {
+            var target = jQuery("#"+jQuery(this).closest('.modal').attr('id'));
+            var variationValue = jQuery(this).html();
+            var variationSelect = jQuery('.variations').find('select');
 
-        jQuery('.attribute-item').removeClass('current-variation');
-        jQuery(this).addClass('current-variation');
+            jQuery('.attribute-item').removeClass('current-variation');
+            jQuery(this).addClass('current-variation');
 
-        if (target.hasClass('open')) {
-            target.fadeOut('fast');
-            target.removeClass('open');
+            if (target.hasClass('open')) {
+                target.fadeOut('fast');
+                target.removeClass('open');
+            }
+
+            variationSelect.find('[value = '+variationValue+']').prop('selected', true).trigger('change');
         }
-
-        variationSelect.find('[value = '+variationValue+']').prop('selected', true).trigger('change');
     });
 
     return this;

@@ -24,10 +24,8 @@ Et c'est partiiiiiieeeeee
 
 /* BODY */
 	body {
-		background:none;
+		background: none;
 	}
-
-
 
 /* General elements */
 
@@ -628,9 +626,6 @@ Et c'est partiiiiiieeeeee
   }
 }
 
-
-
-
 @media screen and (min-width: 780px) {
 	.mini_cart_item > a, .mini_cart_item > span {
 		padding: 0 10px;
@@ -644,8 +639,6 @@ Et c'est partiiiiiieeeeee
 		font-size: 18px;
 	}
 }
-
-
 
 /*image*/
 .table-image-thumbnail {
@@ -664,9 +657,6 @@ Et c'est partiiiiiieeeeee
   }
 }
 
-
-
-
 /* texte variation  normalement dans table-name mais à verif avec les media query*/
 .variation{
 	width: 30%;
@@ -682,9 +672,6 @@ Et c'est partiiiiiieeeeee
 	  width: 60%;
 	}
 }
-
-
-
 
 /////////////////////////////////////////* END MENU RIGHT *////////////////////////////////////////////
 
@@ -707,6 +694,9 @@ Et c'est partiiiiiieeeeee
 }
 
 
+.product_title {
+	font-size: 38px;
+}
 
 /*woocommerce single product page*/
 .woocommerce-page div.product div.images {
@@ -716,6 +706,15 @@ Et c'est partiiiiiieeeeee
 	float: right;
 	width: 33%;
 	padding-left: 5%;
+
+	.product-tab {
+		padding-bottom: 10px;
+
+		h2 {
+			font-size: 23px;
+			line-height: 1em;
+		}
+	}
 }
 .woocommerce-page div.product div.summary .summary-inner {
 	position: fixed;
@@ -955,7 +954,6 @@ tr.cart_item > td > a{
 
 /////////////////////////////////////////* END PAGE CART WOOCOMMERCE *////////////////////////////////////////////
 
-
 /*footer taille*/
 #footer-bottom {
     padding: 6px 0 0;
@@ -1019,7 +1017,6 @@ ul.et_pb_side_nav .side_nav_item a.active {
 
 }
 /* End Floating Dot Navigation */
-
 
 /* Back To Top Button */
 .et_pb_scroll_top.et-pb-icon {
