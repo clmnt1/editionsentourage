@@ -47,19 +47,35 @@ Et c'est partiiiiiieeeeee
 .slidemenu-control {
 	cursor: pointer;
 }
-
-.slidemenu-menu {
-	position: absolute;
-	top: 0;
-	display: block !important;
-	width: 50vw;
-	height: 100vh;
-	padding: 57px 32%;
-	background: rgba(240, 216, 131, 0.95);
-	z-index: 130;
-	-webkit-transition: all 0.3s ease-in-out 0.3s;
-	transition: all 0.3s ease-in-out 0.3s;
+@media screen and (min-width: 780px) {
+	.slidemenu-menu {
+		position: absolute;
+		top: 0;
+		display: block !important;
+		width: 50vw;
+		height: 100vh;
+		padding: 36.5% 32%;
+		background: rgba(240, 216, 131, 0.95);
+		z-index: 130;
+		-webkit-transition: all 0.3s ease-in-out 0.3s;
+		transition: all 0.3s ease-in-out 0.3s;
+	}
 }
+@media screen and (max-width: 780px) {
+	.slidemenu-menu {
+		position: absolute;
+		top: 0;
+		display: block !important;
+		width: 83.6vw;
+		height: 100vh;
+		padding: 36.5% 32%;
+		background: rgba(240, 216, 131, 0.95);
+		z-index: 130;
+		-webkit-transition: all 0.3s ease-in-out 0.3s;
+		transition: all 0.3s ease-in-out 0.3s;
+	}
+}
+
 
 .slidemenu-menu.active {
 	display: block !important;
@@ -75,19 +91,21 @@ Et c'est partiiiiiieeeeee
 		width: 44px;
 		height: 44px;
 		background: url("./images/X_222222.svg") no-repeat center;
-		background-size: 44px 44px;
+		background-size: 100% 100%;
+		right: 5.5%;
 	}
 }
 @media screen and (max-width: 780px) {
 	.slidemenu-close {
 		position: absolute;
 		cursor: pointer;
-		top: 7.5%;
+		top: 6.2%;
 		margin-left: 0;
-		width: 25px;
-		height: 25px;
+		width: 42px;
+		height: 42px;
 		background: url("./images/X_222222.svg") no-repeat center;
-		background-size: 25px 25px;
+		background-size: 100% 100%;
+		right: 6.5%;
 	}
 }
 
@@ -102,109 +120,186 @@ Et c'est partiiiiiieeeeee
 	z-index: 110;
 }
 
-#logo{
-	margin-top: 37%;
-	margin-left: 30%;
+@media screen and (min-width: 780px){
+	#logo{
+		max-width: 50% !important;
+		margin-top: 37%;
+		margin-left: 30%;
+	}
 }
 
-.slidemenu-left .slidemenu-menu {
-	left: -50vw;
+@media screen and (max-width: 780px){
+	#logo {
+		max-width: 70% !important;
+	  margin-top: 33%;
+	  margin-left: 69%;
+	}
+}
+
+@media screen and (min-width: 780px){
+	.slidemenu-left .slidemenu-menu {
+		left: -50vw;
+	}
+}
+@media screen and (max-width: 780px){
+	.slidemenu-left .slidemenu-menu {
+		left: -83.6vw;
+	}
 }
 
 .slidemenu-left .slidemenu-menu.active {
 	left: 0;
 }
 
-.slidemenu-left .slidemenu-close {
-	right: 5.5%;
-}
-
-@media screen and (min-width: 780px) {
-	#top-menu-nav #top-menu li a {
-		font-style: normal;
-		font-size: 40px;
-		line-height: 48px;
-	}
-}
-@media screen and (max-width: 780px) {
-	#top-menu-nav #top-menu li a {
-		padding: 5px 0;
-		font-style: normal;
-		font-size: 18px;
-		line-height: normal;
-	}
-}
-
 /*position social and copyright*/
 #top-menu-nav .left-bar {
-	display: inline-block;
-	vertical-align: top;
-	padding-top: 1.7%;
-	margin-right: 15%;
-	width: 5.3%;
+	/* min-width 780px */
+	@media screen and (min-width: 780px){
+		display: inline-block;
+		vertical-align: top;
+		padding-top: 3%;
+		margin-right: 15%;
+		width: 5.3%;
+		height: 100%;
 
-	/*position social link*/
-	.flex-container {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		align-items: left;
-		width: 40px;
-		height: 88vh;
+		/*position social link*/
+		.flex-container {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: left;
+			width: 40px;
+			height: 101%;
 
-		.social-links{
-			margin-top: 1.4%;
+			.social-links{
+				margin-top: 1.4%;
 
-			.et-social-icons {
-				float: none;
-				clear: both;
+				.et-social-icons {
+					float: none;
+					clear: both;
+				}
+
+				.et-social-icons li {
+					display: block;
+					margin:  0 0 20px 0;
+					text-align: center;
+				}
+
+				.et-social-icon a {
+				  display: inline-block;
+				  position: relative;
+				  color: $main-black;
+				  font-size: 30px;
+				  text-align: center;
+				  text-decoration: none;
+				  transition: color 300ms ease 1s;
+				}
 			}
+		} /*end position social link*/
 
-			.et-social-icons li {
-				display: block;
-				margin:  0 0 20px 0;
-				text-align: center;
+		/*position copyright*/
+		.copyright {
+			line-height: normal;
+			align-self: left;
+			font-size: 20px;
+			font-weight: 600;
+			span{
+				writing-mode: sideways-lr;
+				a:hover {
+					color: $main-grey;
+					transition: color 300ms ease 0s ;
+				}
 			}
-
-			.et-social-icon a {
-			  display: inline-block;
-			  position: relative;
-			  color: $main-black;
-			  font-size: 30px;
-			  text-align: center;
-			  text-decoration: none;
-			  transition: color 300ms ease 1s;
-			}
+		}	/*end position copyright*/
+		#et-info > a, .copyright > span > a {
+			color: #222 ;
+			transition: color 300ms ease 0s ;
 		}
-	} /*end position social link*/
+	} /* end min-width 780px */
 
-	/*position copyright*/
-	.copyright {
-		line-height: normal;
-		align-self: left;
-		font-size: 20px;
-		font-weight: 600;
-		span{
-			writing-mode: sideways-lr;
-			a:hover {
-				color: $main-grey;
-				transition: color 300ms ease 0s ;
+	/* max-width 780px */
+	@media screen and (max-width: 780px){
+		display: inline-block;
+		vertical-align: top;
+		padding-top: 7.9%;
+		margin-right: 7%;
+		margin-left: 2.5%;
+		width: 5.3%;
+		height: 100%;
+
+		/*position social link*/
+		.flex-container {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: left;
+			width: 40px;
+			height: 100%;
+
+			.social-links{
+				margin-top: 0;
+
+				.et-social-icons {
+					float: none;
+					clear: both;
+				}
+
+				.et-social-icons li {
+					display: block;
+					margin:  0 0 20px 0;
+					text-align: center;
+				}
+
+				.et-social-icon a {
+				  display: inline-block;
+				  position: relative;
+				  color: $main-black;
+				  font-size: 30px;
+				  text-align: center;
+				  text-decoration: none;
+				  transition: color 300ms ease 1s;
+				}
 			}
+		} /*end position social link*/
+
+		/*position copyright*/
+		.copyright {
+			line-height: normal;
+			align-self: left;
+			font-size: 20px;
+			font-weight: 600;
+			span{
+				writing-mode: sideways-lr;
+				a:hover {
+					color: $main-grey;
+					transition: color 300ms ease 0s ;
+				}
+			}
+		}	/*end position copyright*/
+		#et-info > a, .copyright > span > a {
+			color: #222 ;
+			transition: color 300ms ease 0s ;
 		}
-	}	/*end position copyright*/
-	#et-info > a, .copyright > span > a {
-		color: #222 ;
-		transition: color 300ms ease 0s ;
-	}
+	} /* end max-width 780px */
 
 } /*end position social and copyright*/
 
 /* middle bar with menu1 and seconday*/
 #top-menu-nav .middle-bar {
-	display: inline-block;
-	vertical-align: top;
-	padding-top: 2.2%;
-	width: 57.5%;
+	@media screen and (min-width: 780px){
+		display: inline-block;
+		vertical-align: top;
+		padding-top: 3.5%;
+		width: 57.5%;
+	}
+
+	@media screen and (max-width: 780px){
+		display: inline-block;
+		vertical-align: top;
+		padding-top: 6.5%;
+		width: 57.5%;
+	}
+
 	/* menu1*/
 	#top-menu{
 		font-family: 'Open Sans', Helvetica, Arial, Lucida, sans-serif;
@@ -220,6 +315,22 @@ Et c'est partiiiiiieeeeee
 		li.current-menu-item > a{
 			color: $main-grey !important;
 		}
+
+		li a{
+
+			@media screen and (min-width: 780px) {
+					font-style: normal;
+					font-size: 40px; /*40px 2.38vw*/
+					line-height: 48px; /*48px 5.2vh 2.85vw*/
+				}
+
+			@media screen and (max-width: 780px) {
+					padding: 0 0;
+					font-style: normal;
+					font-size: 40px; /*40px 5.14vw*/
+					line-height: 48px; /*48px 4.7vh 6.15vw*/
+			}
+		}
 	} /* end menu1*/
 
 	/* search */
@@ -227,37 +338,33 @@ Et c'est partiiiiiieeeeee
 		margin-top: 1.5%;
 		position: static;
 		border-radius: 0;
+		width: 100% !important;
+		max-width: 100% !important;
 
-		.et-search-field {
-	    position: static;
-	    width: 47% !important;
-			padding: 0px 3px !important;
-	    border: 3px solid #222222 !important;
-	    font-size: 30px !important;
-	    color: #222222 !important;
-	    margin-left: 3.5%;
-			font-weight: 400;
-		}
 
 		@media screen and (min-width: 780px) {
 			.et-search-field {
 				position: static;
-				width: 200px;
-				padding: 10px 25px;
-				border: 3px solid $main-black;
-				font-size: 25px;
-				color: $main-black;
+				width: 47% !important;
+				padding: 0px 3px !important;
+				border: 3px solid $main-black !important;
+				font-size: 30px !important;
+				color: $main-black !important;
+				margin-left: 3.5%;
+				font-weight: 400;
 			}
 		}
 
 		@media screen and (max-width: 780px) {
 			.et-search-field {
 				position: static;
-				width: 110px;
-				border: 3px solid $main-black;
-				padding: 5px 10px;
-				font-size: 14px;
-				color: $main-black;
+				width: 60% !important;
+				padding: 0px 3px !important;
+				border: 3px solid $main-black !important;
+				font-size: 30px !important;
+				color: $main-black !important;
+				margin-left: 3.5%;
+				font-weight: 400;
 			}
 		}
 
@@ -331,16 +438,31 @@ Et c'est partiiiiiieeeeee
 
 .slidemenu-right {
 
-	.slidemenu-menu {
-		right: -50vw;
+	@media screen and (min-width: 780px){
+		.slidemenu-menu {
+			right: -50vw;
+		}
+	}
+	@media screen and (max-width: 780px){
+		.slidemenu-menu {
+			right: -83.6vw;
+		}
 	}
 
 	.slidemenu-menu.active {
 		right: 0;
 	}
 
-	.slidemenu-close {
-		left: 15px;
+	@media screen and (min-width: 780px){
+		.slidemenu-close {
+			left: 2.2%;
+		}
+	}
+
+	@media screen and (max-width: 780px){
+		.slidemenu-close {
+			left: 6.5%;
+		}
 	}
 
 	.cart-picto{
@@ -358,10 +480,12 @@ Et c'est partiiiiiieeeeee
 	}
 
 	.cart_list {
-		padding-top: 119px;
+		margin-top: 8.6%;
+		padding-top: 8%; /* 16.6% 119px */
 		padding-left: 6%;
 		height: 100%;
-	  max-height: 550px;
+	  max-height: 600px; /*avant 550px pour pas margin et padding 16.6%*/
+		overflow: auto;
 
 		.cart-table {
 			width: 100%;
@@ -647,6 +771,32 @@ Et c'est partiiiiiieeeeee
 	background: white;
 }
 
+/* enlever la variation woocommerce */
+.variations{
+	display:none;
+}
+
+/* calage infos lors de l'ajout d'un produit au panier */
+.woocommerce-message, .woocommerce-error, .woocommerce-info {
+    padding: 14px !important;
+    border: none !important;
+    color: #fff !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    font-size: 18px !important;
+		margin: 0 0 0 !important;
+}
+
+/* bien caler le début des images de page produit */
+.woocommerce div.product .product_title {
+    clear: none;
+    margin-top: -0.2%;
+    padding: 0;
+    margin-bottom: 3.1%;
+}
+
 /* Modal */
 /* tableau variation */
 .modal {
@@ -661,16 +811,16 @@ Et c'est partiiiiiieeeeee
 
 .modal .modal-content {
 	position: absolute;
-	top: 50%;
+	top: 42.8%;
 	left: 50%;
-	width: 60%;
+	width: 51%;
 	min-width: 680px;
 	max-height: 80vh;
-	padding: 25px;
+	padding: 22px;
 	border: 8px solid $main-black;
 	transform: translate(-50%, -50%);
 	overflow: hidden;
-	background: white;
+	background: rgba(255, 255, 255, 0.95);
 	z-index: 120;
 }
 .modal-button {
@@ -680,17 +830,19 @@ Et c'est partiiiiiieeeeee
 	font-size: 16px;
 	font-weight: 500;
 	color: $main-black;
-	background: #f0f0e2;
+	background: #e6e6e6; /* avant #f0f0e2*/
 	cursor: pointer;
 	transition: all 0.4s ease 0s;
 }
 .modal-button:hover {
-	background: #e6e6e6;
+	background: $main-yellow; /* avant #e6e6e6 */
 }
 
 .modal .modal-body {
 	overflow-y: auto;
 	overflow-x: hidden;
+	width: 88%;
+	margin: 0 6% 0 6%;
 }
 
 .modal .modal-overlay {
@@ -705,10 +857,10 @@ Et c'est partiiiiiieeeeee
 	position: absolute;
 	top: 15px;
 	right: 15px;
-	width: 20px;
-	height: 20px;
+	width: 44px;
+	height: 44px;
 	background: url("./images/X_222222.svg") no-repeat center;
-	background-size: 20px;
+	background-size: 44px;
 	cursor: pointer;
 }
 
@@ -719,14 +871,13 @@ Et c'est partiiiiiieeeeee
 
 .modal .attribute-list .attribute-item {
 	display: inline-block;
-	width: 50px;
-	padding: 10px 3px;
+	width: 56px;
 	text-align: center;
-	font-size: 28px;
+	font-size: 30px;
 	font-weight: 500;
 	list-style: none;
 	cursor: pointer;
-	line-height: 26px;
+	line-height: 52px;
 	border-radius: 50%;
 	border: 2px solid transparent;
 	transition: all 0.4s ease 0s;

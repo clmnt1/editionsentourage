@@ -94,7 +94,7 @@
 					<!-- #contact -->
 					<div id="et-info">
 						<?php if ( '' !== ( $et_phone_number = et_get_option( 'phone_number' ) ) ) : ?>
-							<a href="<?php echo esc_attr( 'callto:' . $et_phone_number ); ?>"><span><?php echo esc_html( $et_phone_number ); ?></span></a>
+							<a href="<?php echo esc_attr( 'tel:' . $et_phone_number ); ?>"><span><?php echo esc_html( $et_phone_number ); ?></span></a>
 						<?php endif; ?>
 
 						<?php if ( '' !== ( $et_email = et_get_option( 'header_email' ) ) ) : ?>
