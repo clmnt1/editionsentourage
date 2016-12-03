@@ -695,7 +695,7 @@ Et c'est partiiiiiieeeeee
 
 
 .product_title {
-	font-size: 38px;
+	font-size: 40px;
 }
 
 /*woocommerce single product page*/
@@ -703,16 +703,20 @@ Et c'est partiiiiiieeeeee
 	width: 66%;
 }
 .woocommerce-page div.product div.summary {
-	float: right;
 	width: 33%;
 	padding-left: 5%;
+	overflow: auto;
+	position: fixed;
+	right: 5.5%;
+	max-height: 82vh;
+	top: 13%;
 
 	.product-tab {
 		padding-bottom: 10px;
 
 		h2 {
-			font-size: 23px;
-			line-height: 1em;
+			font-size: 30px;
+			line-height: 41px;
 		}
 	}
 }
@@ -788,10 +792,12 @@ Et c'est partiiiiiieeeeee
 		margin: 0 0 0 !important;
 }
 
+
+
 /* bien caler le début des images de page produit */
 .woocommerce div.product .product_title {
     clear: none;
-    margin-top: -0.2%;
+    margin-top: 0.2%;
     padding: 0;
     margin-bottom: 3.1%;
 }

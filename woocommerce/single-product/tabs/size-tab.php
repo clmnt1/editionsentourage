@@ -14,8 +14,10 @@ $depthText = (get_post_meta($product->id, 'depth_text', true) != '') ? get_post_
     <h2><?php _e('Dimensions', 'ee') ?></h2>
     <span><?php _e('Hauteur', 'ee') ?></span>
     <?php echo $heightText ?>
+    <br />
     <span><?php _e('Largeur', 'ee') ?></span>
     <?php echo $widthText ?>
+    <br />
     <span><?php _e('Profondeur', 'ee') ?></span>
     <?php echo $depthText ?>
 </div>
