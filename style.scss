@@ -667,7 +667,7 @@ Et c'est partiiiiiieeeeee
 	}
 	dd {
 		float: left;
-		margin: -24px 0 0 0;
+		margin: -29px 0 0 0;
 	  text-align: right;
 	  width: 60%;
 	}
@@ -676,6 +676,50 @@ Et c'est partiiiiiieeeeee
 /////////////////////////////////////////* END MENU RIGHT *////////////////////////////////////////////
 
 /////////////////////////////////////////* PAGE PRODUCT WOOCOMMERCE *////////////////////////////////////////////
+
+/* test accordeon produit infos */
+
+/* Accordion + Toggle Modules*/
+
+
+.et_pb_toggle, .et_pb_toggle_close, .et_pb_toggle_open {
+	border: none;
+	padding-top: 0px;
+	background-color: #fff;
+	padding: 0;
+
+	.et_pb_toggle_title {
+		position: relative;
+		padding: 0 0px 0 0;
+		cursor: pointer;
+		color: $main-black;
+	}
+}
+
+.et_pb_toggle_title:before {
+	position: absolute;
+	top: inherit;
+	right: 0;
+	margin-top: 1%;
+	color: $main-black;
+	font-size: 25px;
+	content: "L";
+}
+
+.et_pb_toggle_open .et_pb_toggle_title:before {
+	content: "K";
+}
+
+.et_pb_toggle_content {
+	padding-top: 0px;
+}
+
+.et_pb_toggle_content p:last-of-type {
+	padding-bottom: 0;
+}
+/*fin test accordeon infos produits*/
+
+
 
 /*menu et bar sup*/
 .et_header_style_left .logo_container {
@@ -700,19 +744,19 @@ Et c'est partiiiiiieeeeee
 
 /*woocommerce single product page*/
 .woocommerce-page div.product div.images {
-	width: 66%;
+	width: 64.8%; /*66*/
 }
 .woocommerce-page div.product div.summary {
-	width: 33%;
-	padding-left: 5%;
+	width: 29.666%;
+	padding-left: 7.4%;
 	overflow: auto;
 	position: fixed;
-	right: 5.5%;
-	max-height: 82vh;
-	top: 13%;
+	right: 12.5%;
+	max-height: 74.5vh;
+	top: 19%;
 
 	.product-tab {
-		padding-bottom: 10px;
+		padding-bottom: 25px;
 
 		h2 {
 			font-size: 30px;
@@ -797,9 +841,9 @@ Et c'est partiiiiiieeeeee
 /* bien caler le début des images de page produit */
 .woocommerce div.product .product_title {
     clear: none;
-    margin-top: 0.2%;
+    margin-top: 0.4%;
     padding: 0;
-    margin-bottom: 3.1%;
+    margin-bottom: 4%;
 }
 
 /* Modal */
@@ -945,9 +989,9 @@ tr.cart_item > td > a{
 		display: block;
 		font-size: 40px !important;
 		text-align: center !important;
-		line-height: 0 !important;
+		line-height: 1 !important;
 		border-radius: 0 !important;
-		color: $main-grey !important;
+		color: $main-black !important;
 		text-decoration: none !important;
 		font-weight: 300 !important;
 		border: 0 !important;
@@ -955,6 +999,7 @@ tr.cart_item > td > a{
 		}
 	a.remove:hover {
 		color: $main-grey !important;
+		background-color: #fff;
 	}
 }
 

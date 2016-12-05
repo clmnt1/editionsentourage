@@ -194,8 +194,23 @@ body { background: none; }
 
 .variation dt { font-weight: 100; }
 
-.variation dd { float: left; margin: -24px 0 0 0; text-align: right; width: 60%; }
+.variation dd { float: left; margin: -29px 0 0 0; text-align: right; width: 60%; }
 
+/* test accordeon produit infos */
+/* Accordion + Toggle Modules*/
+.et_pb_toggle, .et_pb_toggle_close, .et_pb_toggle_open { border: none; padding-top: 0px; background-color: #fff; padding: 0; }
+
+.et_pb_toggle .et_pb_toggle_title, .et_pb_toggle_close .et_pb_toggle_title, .et_pb_toggle_open .et_pb_toggle_title { position: relative; padding: 0 0px 0 0; cursor: pointer; color: #222; }
+
+.et_pb_toggle_title:before { position: absolute; top: inherit; right: 0; margin-top: 1%; color: #222; font-size: 25px; content: "L"; }
+
+.et_pb_toggle_open .et_pb_toggle_title:before { content: "K"; }
+
+.et_pb_toggle_content { padding-top: 0px; }
+
+.et_pb_toggle_content p:last-of-type { padding-bottom: 0; }
+
+/*fin test accordeon infos produits*/
 /*menu et bar sup*/
 .et_header_style_left .logo_container { position: static; }
 
@@ -206,11 +221,11 @@ body { background: none; }
 .product_title { font-size: 40px; }
 
 /*woocommerce single product page*/
-.woocommerce-page div.product div.images { width: 66%; }
+.woocommerce-page div.product div.images { width: 64.8%; /*66*/ }
 
-.woocommerce-page div.product div.summary { width: 33%; padding-left: 5%; overflow: auto; position: fixed; right: 5.5%; max-height: 82vh; top: 13%; }
+.woocommerce-page div.product div.summary { width: 29.666%; padding-left: 7.4%; overflow: auto; position: fixed; right: 12.5%; max-height: 74.5vh; top: 19%; }
 
-.woocommerce-page div.product div.summary .product-tab { padding-bottom: 10px; }
+.woocommerce-page div.product div.summary .product-tab { padding-bottom: 25px; }
 
 .woocommerce-page div.product div.summary .product-tab h2 { font-size: 30px; line-height: 41px; }
 
@@ -244,7 +259,7 @@ body { background: none; }
 .woocommerce-message, .woocommerce-error, .woocommerce-info { padding: 14px !important; border: none !important; color: #fff !important; -webkit-box-shadow: none !important; -moz-box-shadow: none !important; box-shadow: none !important; text-shadow: none !important; font-size: 18px !important; margin: 0 0 0 !important; }
 
 /* bien caler le début des images de page produit */
-.woocommerce div.product .product_title { clear: none; margin-top: 0.2%; padding: 0; margin-bottom: 3.1%; }
+.woocommerce div.product .product_title { clear: none; margin-top: 0.4%; padding: 0; margin-bottom: 4%; }
 
 /* Modal */
 /* tableau variation */
@@ -288,9 +303,9 @@ body { background: none; }
 tr.cart_item > td > a { font-weight: 400; }
 
 /* coix dans tableau panier */
-.woocommerce a.remove { display: block; font-size: 40px !important; text-align: center !important; line-height: 0 !important; border-radius: 0 !important; color: #666 !important; text-decoration: none !important; font-weight: 300 !important; border: 0 !important; margin-left: 6%; }
+.woocommerce a.remove { display: block; font-size: 40px !important; text-align: center !important; line-height: 1 !important; border-radius: 0 !important; color: #222 !important; text-decoration: none !important; font-weight: 300 !important; border: 0 !important; margin-left: 6%; }
 
-.woocommerce a.remove:hover { color: #666 !important; }
+.woocommerce a.remove:hover { color: #666 !important; background-color: #fff; }
 
 /*footer taille*/
 #footer-bottom { padding: 6px 0 0; }

@@ -31,10 +31,10 @@ function ebac_polylang_compatibility( $quantity, $keep_stock_id, $booked ) {
         if ( $pll_translations ) {
 
             foreach ( $pll_translations as $language => $ID ) {
-                if ( $keep_stock_id != $ID ) { 
+                if ( $keep_stock_id != $ID ) {
 
                     add_post_meta( $ID, '_booking_days', $booked, true ) || update_post_meta( $ID, '_booking_days', $booked );
-		            
+
                 }
             }
 
