@@ -743,8 +743,13 @@ Et c'est partiiiiiieeeeee
 }
 
 /*woocommerce single product page*/
+
+.et_full_width_page #left-area{
+width: 64.78% !important;
+}
+
 .woocommerce-page div.product div.images {
-	width: 64.8%; /*66*/
+	width: 100%; /*64.8*/
 }
 .woocommerce-page div.product div.summary {
 	width: 29.666%;
@@ -841,9 +846,9 @@ Et c'est partiiiiiieeeeee
 /* bien caler le début des images de page produit */
 .woocommerce div.product .product_title {
     clear: none;
-    margin-top: 0.4%;
+    margin-top: 0.5%;
     padding: 0;
-    margin-bottom: 4%;
+    margin-bottom: 6%;
 }
 
 /* Modal */
@@ -942,6 +947,20 @@ Et c'est partiiiiiieeeeee
 .single_variation_wrap {
 	margin: 15px 0;
 }
+
+/* Numéro de série out-of-stock*/
+
+.woocommerce div.product .out-of-stock {
+  color: $main-grey;
+  border: 2px solid transparent;
+	background-color: #e6e6e6;
+}
+.woocommerce div.product .out-of-stock:hover {
+	color: $main-grey;
+	border: 2px solid transparent;
+}
+
+/* End Numéro de série out-of-stock*/
 
 /////////////////////////////////////////* END PAGE PRODUCT WOOCOMMERCE *////////////////////////////////////////////
 
