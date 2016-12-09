@@ -190,11 +190,11 @@ body { background: none; }
 .table-name .variation { width: 100%; margin: -3px 0 0 0; }
 
 /* texte variation  normalement dans table-name mais à verif avec les media query*/
-.variation { width: 30%; margin-left: 8%; }
+dl.variation { width: 30%; margin-left: 8%; }
 
-.variation dt { font-weight: 100; }
+dl.variation dt { font-weight: 100; }
 
-.variation dd { float: left; margin: -29px 0 0 0; text-align: right; width: 60%; }
+dl.variation dd { float: left; margin: -29px 0 0 0; text-align: right; width: 60%; }
 
 /* test accordeon produit infos */
 /* Accordion + Toggle Modules*/
@@ -254,6 +254,11 @@ body { background: none; }
 
 .woocommerce .single_variation_wrap button.button.single_add_to_cart_button:hover { border: 3px solid #222 !important; border-radius: 0; color: #222 !important; background: white; }
 
+/* produits apparentés */
+.et_overlay { background-color: rgba(247, 243, 195, 0.89) !important; border-color: rgba(247, 243, 195, 0.89); }
+
+.et_overlay::before { content: "\004C"; }
+
 /* enlever la variation woocommerce */
 .variations { display: none; }
 
@@ -302,9 +307,9 @@ body { background: none; }
 /* affichage infos page panier */
 .woocommerce td.product-name dl.variation { width: 100%; font-size: 15px; font-weight: 300; }
 
-.woocommerce td.product-name dl.variation dd { padding: 0; }
+.woocommerce td.product-name dl.variation dd { padding: 0; margin: 0% 0% 0 0; }
 
-.woocommerce td.product-name dl.variation dd p { float: right; margin: -2% 25% 0 0; padding: 0; text-align: center; width: 20%; }
+.woocommerce td.product-name dl.variation dd p { float: left; margin: 0 0 0 10px; padding: 0; text-align: center; }
 
 .woocommerce td.product-name dl.variation dt { font-weight: 300; padding: 0 0 0; margin: 0px 0px 0px 0px; clear: left; }
 
@@ -320,6 +325,9 @@ tr.cart_item > td > a { font-weight: 400; }
 
 /* footer largeur*/
 div.container.clearfix { width: 96%; }
+
+/* menu footer FR EN */
+#main-footer { background-color: #ffffff; position: fixed; bottom: 1.6%; left: 3.1%; }
 
 /* Floating Dot Navigation */
 ul.et_pb_side_nav { display: block; position: fixed; z-index: 110; top: 50%; right: 2%; width: 0px; padding: 4%; -webkit-border-top-left-radius: 0; -moz-border-radius-topleft: 0; border-top-left-radius: 0; -webkit-border-bottom-left-radius: 0; -moz-border-radius-bottomleft: 0; border-bottom-left-radius: 0; opacity: 0; background: transparent; }
