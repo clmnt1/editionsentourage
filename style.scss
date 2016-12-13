@@ -424,7 +424,7 @@ Et c'est partiiiiiieeeeee
 	top: 0;
 	height: 33vh;
 	width: 8%;
-	z-index: 110;
+	z-index: 109;
 
 	/* Cart sidebar */
 	.cart-sidebar {
@@ -791,7 +791,7 @@ width: 64.78% !important;
 }
 
 .woocommerce-page #main-footer {
-	display: none;
+	display: inherit;
 }
 
 /* Product additional information */
@@ -1048,19 +1048,23 @@ div.container.clearfix {
 #main-footer {
     background-color: #ffffff;
     position: fixed;
-    bottom: 1.6%;
-    left: 3.1%;
+    bottom: 1.7%;
+    left: 2.5%;
+
+		.bottom-nav, .bottom-nav a {
+    font-size: 30px;
+	}
 }
 
 /* Floating Dot Navigation */
 ul.et_pb_side_nav {
 	display: block;
 	position: fixed;
-	z-index: 110;
+	z-index: 108;
 	top: 50%;
-	right: 2%;
+	right: 6.2%;
 	width: 0px;
-	padding: 4%;
+	padding: 0%;
 	-webkit-border-top-left-radius: 0;
 	-moz-border-radius-topleft: 0;
 	border-top-left-radius: 0;
