@@ -51,13 +51,7 @@ if ( $attachment_ids ) {
 
 			echo apply_filters(
 				'woocommerce_single_product_image_thumbnail_html',
-				sprintf(
-					'<a href="%s" class="%s" title="%s" data-rel="prettyPhoto[product-gallery]">%s</a>',
-					esc_url( $props['url'] ),
-					esc_attr( $image_class ),
-					esc_attr( $props['caption'] ),
-					wp_get_attachment_image( $attachment_id, apply_filters( 'single_product_large_thumbnail_size', 'shop_single' ), 0, $props )
-				),
+				wp_get_attachment_image( $attachment_id, apply_filters( 'single_product_large_thumbnail_size', 'shop_single' ), 0, $props ),
 				$attachment_id,
 				$post->ID,
 				esc_attr( $image_class )

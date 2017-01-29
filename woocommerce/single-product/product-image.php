@@ -20,10 +20,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+$additional = (get_post_meta($product->id, 'additional_textarea', true) != '') ? get_post_meta($product->id, 'additional_textarea', true) : 0;
 global $post, $product;
 ?>
-<?php the_title( '<h1 itemprop="name" class="product_title entry-title">', '</h1>' ); ?>
 
+<div class="title_container">
+<?php the_title( '<h1 itemprop="name" class="product_title entry-title">', '</h1>' ); ?>
+<?php do_action( 'woocommerce_product_subtitle' ); ?>
+</div>
 <div class="images">
 	<?php
 		if ( has_post_thumbnail() ) {
@@ -36,13 +40,7 @@ global $post, $product;
 			) );
 			echo apply_filters(
 				'woocommerce_single_product_image_html',
-				sprintf(
-					'<a href="%s" itemprop="image" class="woocommerce-main-image zoom" title="%s" data-rel="prettyPhoto%s">%s</a>',
-					esc_url( $props['url'] ),
-					esc_attr( $props['caption'] ),
-					$gallery,
-					$image
-				),
+				$image,
 				$post->ID
 			);
 		} else {

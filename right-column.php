@@ -60,12 +60,16 @@
 												<a href="<?php echo esc_url( $product_permalink ); ?>">
 													<?php echo $product_name?>
 												</a>
-												<?php echo WC()->cart->get_item_data( $cart_item ); ?>
 											</td>
 										<?php endif; ?>
 										<td class="table-price">
 											<?php echo apply_filters( 'woocommerce_widget_cart_item_quantity', '<span class="quantity">' . sprintf( '%s &times; %s', $cart_item['quantity'], $product_price ) . '</span>', $cart_item, $cart_item_key ); ?>
 										</td>
+									</tr>
+									<tr class="table-variations">
+										<td></td>
+										<td class="table-image-thumbnail"></td>
+										<td colspan="2" class="table-name"><?php echo WC()->cart->get_item_data( $cart_item ); ?></td>
 									</tr>
 									<?php
 								}

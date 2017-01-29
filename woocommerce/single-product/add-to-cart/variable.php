@@ -67,6 +67,7 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 				<div class="modal-body">
 					<ul class="attribute-list">
 						<?php $product_variations = $product->get_available_variations();
+						arsort($product_variations);
 						foreach ($product_variations as $key => $variation): ?>
 							<?php $variation_name = reset($variation['attributes']); ?>
 							<?php $variation_ava = $variation['is_in_stock']; ?>

@@ -137,7 +137,7 @@ remove_filter( 'woocommerce_product_tabs', 'woocommerce_default_product_tabs' );
 function ee_additional_product_tab_content() {
     wc_get_template('single-product/tabs/additional-tab.php');
 }
-add_filter('woocommerce_product_tabs', 'ee_additional_product_tab_content');
+add_filter('woocommerce_product_subtitle', 'ee_additional_product_tab_content');
 
 function ee_add_additional_field_data() {
     woocommerce_wp_textarea_input(
@@ -276,3 +276,7 @@ function ee_save_pricedetails_product_fields($product_id, $post, $update) {
     }
 }
 add_action('save_post', 'ee_save_pricedetails_product_fields', 10, 3);
+
+/* Ajout string traduction accessible dans Amin/réglage/langues/traduction de chaines */
+pll_register_string('materials', 'Materials', 'Wordpress');
+pll_register_string('details', 'Details', 'Wordpress');
